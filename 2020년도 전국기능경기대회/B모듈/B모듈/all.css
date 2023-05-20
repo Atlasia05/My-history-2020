@@ -1,0 +1,1238 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+/* 헤더부분 */
+body{
+    /* overflow-x: hidden; */
+    background-color: #FBEAEB;
+    color: #2E3C7E;
+}
+/* 헤더부분 */
+header {
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(to right, #000000, #434343);
+    /* overflow: hidden; */
+    white-space: nowrap;
+}
+nav{
+    width: 100vw;
+    height: 15vh;
+
+}
+.logo {
+    height: 6vh;
+}
+.logo > a > img{
+    position: absolute;
+    width: 13vw;
+    height: 10vh;
+    margin-left: 10vw;
+    z-index: 9;
+}
+.blindbox1 {
+    z-index: 8;
+    position: absolute;
+    width: 25.5vw;
+    height: 8.6vh;
+    margin-top: -5vh;
+    border: 1px none;
+}
+.blindbox2 {
+    z-index: 8;
+    position: absolute;
+    width: 25vw;
+    height: 8vh;
+    margin-top: -5vh;
+    margin-left: 77vw;
+    border: 1px none;
+    /* background-color: blanchedalmond; */
+}
+.margin1 {
+    width: 20vw;
+    cursor: default;
+}
+.margin2 {
+    float: right;
+    width: 20vw;
+    cursor: default;
+    /* background-color: red; */
+}
+.mainmenu {
+    display: flex;
+    width: 110vw;
+    height: 5vh;
+    border: 1px solid white;
+    list-style: none;
+    margin-top: -3.2vh;
+}
+.mainmenu > li {
+    height: 250px;
+    font-size: 25px;
+    padding: 10px 40px;
+    color: #ffe4b2;
+    font-weight: 700;
+    z-index: 6;
+    border: none;
+}
+.mainmenu > li > a{
+    text-decoration: none;
+    color: #ffe4b2;
+}
+.mainmenu > li > ul > li{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    background-color: none;
+    color: #ffe4b2;
+    margin-top: 10px;
+    cursor: pointer;
+    padding-top: 20px;
+    z-index: 6;
+    transition: 0.8s;
+}
+.mainmenu > li > ul > li:hover{
+    transform: scale(1.2);
+}
+.mainmenu > li > ul > li > a {
+    text-decoration: none;
+    color: #ffe4b2;
+}
+.mainmenu > .navbox {
+    position: absolute;
+    width: 110vw;
+    height: 20vh;
+    background-color: rgb(255, 254, 241);
+    margin-top: 6vh;
+    /* z-index: 5; */
+}
+.mainmenu {
+    height: 60px;
+    border: none;
+    overflow: hidden;
+    z-index: 6;
+}
+
+.mainmenu:hover {
+    height: 330px;
+}
+.mainmenu > li:hover ~ .hoverbox{
+    visibility: inherit;
+    z-index: 5;
+}
+.hoverbox {
+    width: 110vw;
+    height: 22vh;
+    margin-left: -0.1vw;
+    margin-top: 7vh;
+    position: absolute;
+    border-top: 2px solid rgb(255, 250, 250, 0.2);
+    background: linear-gradient(to right, #000000, #434343);
+    z-index: 0;
+    visibility: hidden;
+    display: flex;
+    border-bottom: 2px solid black;
+}
+.hoverbox > div {
+    cursor: default;
+    width: 250px;
+    height: 18vh;
+    border: 2px solid white;
+}
+
+.hoverbox > div > li {
+    margin-top: 10px;
+    padding: 0;
+    height: 50px;
+}
+/* 헤더부분 끝 */
+
+.leftside {
+    width: 10vw;
+    height: 400vh;
+    float: left;
+    /* background-color: red; */
+}
+/* 이미지 슬라이드 시작 */
+#imgslide {
+    float: left;
+    width: 79.45vw;
+    height: 75vh;
+    border: none;
+}
+#imgslide > input[type="radio"]{
+    display: none;
+}
+#slidbox {
+
+    width: 80vw;
+    height: 65vh;
+    border: 1px solid black;
+}
+.slidelist {
+    margin-top: 2vh;
+    display: flex;
+    width: 70vw;
+    margin-left: 5vw;
+    overflow: hidden;
+    border: 7px double black;
+    height: 70vh;
+}
+.slidelist  > li{
+    position: relative;
+    transition: 0.5s;
+    animation: slide 15s infinite;
+}
+.slidelist  > li > a{
+
+}
+.slidelist > li:first-child > a > label > div{
+    margin-left: 65vw;
+    margin-top: -45vh;
+    width: 5vw;
+    height: 6px;
+    background-color: cornsilk;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 6;
+    position: absolute;
+}
+.slidelist  > li > a > img{
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+}
+/* 에니메이션 버튼 부분 */
+.slidelist  > li > a > label{
+
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    cursor: pointer;
+    border-radius: 50%;
+    animation-delay: 3s;
+}
+.slidelist  > li:nth-child(2) > a > label:first-child{
+    margin-left: 71vw;
+    transform: rotate(180deg);
+}
+.slidelist  > li:nth-child(2) > a > label{
+    margin-left: 135vw;
+}
+.slidelist  > li:nth-child(3) > a > label{
+    transform: rotate(180deg);
+    margin-left: 141vw;
+}
+.slidelist  > li:nth-child(4) > a > label{
+    margin-left: 276vw;
+}
+.slidelist  > li:nth-child(5) > a > label:first-child{
+    margin-left: 281vw;
+    transform: rotate(180deg);
+}
+.slidelist  > li:nth-child(5) > a > label{
+    margin-left: 346vw;
+}
+.slidelist  > li:nth-child(6) > a > label{
+    transform: rotate(180deg);
+    margin-left: 351vw;
+}
+.slidelist  > li > a > label > div{
+    z-index: 2;
+    width: 3vw;
+    height: 6px;
+    border: 1px solid black;
+    border-radius: 30px;
+
+    background-color: cornsilk;
+    border: none;
+}
+.slidelist  > li:first-child > a > label > div:first-child{
+    width: 3vw;
+    margin-top: 0vh;
+    transform: rotate(45deg);
+}
+.slidelist  > li:first-child > a > label > div:last-child{
+    margin-top: 4vh;
+    width: 3vw;
+    transform: rotate(135deg);
+}
+
+.slidelist  > li > a > label > div:first-child{
+    transform: rotate(45deg);
+}
+.slidelist  > li > a > label > div:last-child{
+    margin-top: 3vh;
+    transform: rotate(135deg);
+}
+
+.slidelist  > li:nth-child(2) > a > img{
+    transform: translateX(100%);
+}
+.slidelist  > li:nth-child(3) > a > img{
+    transform: translateX(200%);
+}
+.slidelist  > li:nth-child(4) > a > img{
+    transform: translateX(300%);
+}
+.slidelist  > li:nth-child(5) > a > img{
+    transform: translateX(400%);
+}
+.slidelist  > li:nth-child(6) > a > img{
+    transform: translateX(500%);
+}
+/* 에니메이션 버튼 부분 */
+@keyframes slide {
+    0% {left: 0%;}
+    16.5% {left: 0%}
+    33% {left: -100%;}
+    50% {left: -100%}
+    66% {left: -200%;}
+    84% {left: -200%}
+    100% {left: -300%;}
+}
+@keyframes imgslide1 {
+    0% {left: 0%;}
+    16.5% {left: 0%}
+    33% {left: -100%;}
+    50% {left: -100%}
+    66% {left: -200%;}
+    84% {left: -200%}
+    100% {left: -300%;}
+}
+@keyframes imgslide2 {
+    0% {left: -100%;}
+    16.5% {left: -100%}
+    33% {left: -200%;}
+    50% {left: -200%}
+    66% {left: -300%;}
+    84% {left: -300%}
+    100% {left: -400%;}
+}
+@keyframes imgslide3 {
+    0% {left: -200%;}
+    16.5% {left: -200%}
+    33% {left: -300%;}
+    50% {left: -300%}
+    66% {left: -400%;}
+    84% {left: -400%}
+    100% {left: -500%;}
+}
+
+
+.conbox {
+    top: 58vh;
+    position: absolute;
+    display: flex;
+    width: 70vw;
+    height: 25vh;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+.context {
+    flex: 3;
+}
+.context > p {
+    margin-top: 4vh;
+    text-align: center;
+    color: snow;
+    font-size: 40px;
+}
+.conimg {
+    flex: 4;
+}
+.conimg > label > img{
+    width: 12.5vw;
+    height: 16vh;
+    border: 1px double white;
+    margin-top: 5vh;
+    cursor: pointer;
+}
+.conimg > label > img:first-child{
+    margin-left: 0.5vw;
+}
+#subimg1:checked ~ #slidebox > .slidelist  > li{
+    animation: imgslide1 15s infinite;
+}
+#subimg2:checked ~ #slidebox > .slidelist  > li{
+    animation: imgslide2 15s infinite;
+}
+#subimg3:checked ~ #slidebox > .slidelist  > li{
+    animation: imgslide3 15s infinite;
+}
+
+#nimg1:checked ~ #slidebox > .slidelist  > li{
+    animation: imgslide1 15s infinite;
+}
+#nimg2:checked ~ #slidebox > .slidelist  > li{
+    animation: imgslide2 15s infinite;
+}
+#nimg3:checked ~ #slidebox > .slidelist  > li{
+    animation: imgslide3 15s infinite;
+}
+
+
+/* #imgslide {
+    float: left;
+    width: 80vw;
+    height: 75vh;
+    border: none;
+    border: none;
+}
+
+#imgslide> .imgbox {
+    border: none;
+    width: 70vw;
+    height: 70vh;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/* 서브 박스 */
+/* .imgbox > .controlbox {
+    position: absolute;
+    width: 70vw;
+    height: 30vh;
+    margin-top: 40vh;
+    z-index: 4;
+} */
+#introduce {
+    border-top: 2px dashed rgb(128, 128, 128, 0.5);
+    width: 80vw;
+    height: 80vh;
+    float: left;
+}
+.ducebox {
+    width: 50vw;
+    height: 70vh;
+    margin-left: 15vw;
+    margin-top: 5vh;
+    text-align: center;
+}
+.ducebox > h1 {
+    margin-top: 2vh;
+    font-size: 50px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.ducebox > h1:hover {
+    transform: scaleX(1.2);
+}
+.ducebox > h3:hover {
+    transform: scaleY(1.8);
+}
+.ducebox > .pbox > p:hover {
+    transform: rotate(5deg);
+}
+.ducebox > h3 {
+    font-size: 35px;
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+    transition: 0.5s;
+}
+.pbox{
+    width: 40vw;
+    margin-left: 5vw;
+    text-align: left;
+
+}
+.ducebox > .pbox > p {
+    font-size: 25px;
+    line-height: 35px;
+    transition: 0.5s;
+}
+/* 행사 목록 시작*/
+#eventlist {
+    width: 80vw;
+    height: 80vh;
+    margin-top: 5vh;
+    border-top: 2px dashed rgb(0, 0, 0, 0.4);
+    border-bottom: 2px dashed rgb(0, 0, 0, 0.4);
+    float: left;
+}
+#eventlist > h1 {
+    margin-top: 5vh;
+    font-size: 50px;
+    margin-left: 37%;
+}
+.evlistbox {
+    width: 70vw;
+    height: 60vh;
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+.evlistbox > input[type="radio"] {
+    display: none;
+}
+.evimgbox1 {
+    width: 35vw;
+    height: 60vh;
+    border: 1px double black;
+    border-right: none;
+    float: left;
+}
+.evimgbox2 {
+    width: 34.7vw;
+    height: 60vh;
+    border: none;
+    border: 1px double black;
+    border-left: none;
+    float: left;
+}
+.btns {
+    display: flex;
+    margin-left: 2.5vw;
+}
+#tabbtn1:checked ~ .evimgbox1 > .btns > label[for="tabbtn1"] > p{
+    background-color:#2E3C7E;
+    color:#ffe4b2 ;
+}
+#tabbtn2:checked ~ .evimgbox1 > .btns > label[for="tabbtn2"] > p{
+    background-color:#2E3C7E;
+    color:#ffe4b2 ;
+}
+#tabbtn3:checked ~ .evimgbox1 > .btns > label[for="tabbtn3"] > p{
+    background-color:#2E3C7E;
+    color:#ffe4b2 ;
+}
+.btns > label > p {
+    cursor: pointer;
+    margin-top: 5vh;
+    text-align: center;
+    line-height: 40px;
+    background-color:blanchedalmond;
+    width: 10vw;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid black;
+    font-weight: 700;
+}
+.tabtext {
+    margin-left: 2.5vw;
+    width: 30.2vw;
+    height: 35vh;
+    border: 1px solid black;
+    background-color: rgb(255, 248, 248);
+    opacity: 1;
+    margin-bottom: 2vh;
+}
+.tabtext > div > p{
+   display: inline;
+   top: 198vh;
+   left: 18vw;
+}
+.evimgbox1 > a {
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 29vw;
+}
+input[type="radio"]:checked ~ .evimgbox1 > .tabtext {
+    opacity: 1;
+}
+.tabtext > div {
+    display: inline;
+    opacity: 0;
+}
+#tabbtn1:checked ~ .evimgbox1 > .tabtext > .tabtext1 {
+    opacity: 1;
+}
+#tabbtn2:checked ~ .evimgbox1 > .tabtext > .tabtext2 {
+    opacity: 1;
+}
+#tabbtn3:checked ~ .evimgbox1 > .tabtext > .tabtext3 {
+    opacity: 1;
+}
+.tabtext > div > p {
+    display: inline;
+    font-size: 24px;
+    position: absolute;
+}
+.vsimgzone {
+    margin-top: 5vh;
+    margin-left: 5vw;
+     width: 25vw;
+     height: 40vh;
+     border: 1px solid black;
+     opacity: 0;
+}
+.vsimgzone > div > img {
+    opacity: 0;
+    width: 35vw;
+    height: 40vh;
+    position: absolute;
+    width: 25vw;
+}
+input[type="radio"]:checked ~ .evimgbox2 > .vsimgzone{
+    opacity: 1;
+}
+#tabbtn1:checked ~ .evimgbox2 > .vsimgzone > .vsimg1 > img {
+    opacity: 1;
+}
+#tabbtn2:checked ~ .evimgbox2 > .vsimgzone > .vsimg2 > img {
+    opacity: 1;
+}
+#tabbtn3:checked ~ .evimgbox2 > .vsimgzone > .vsimg3 > img {
+    opacity: 1;
+}
+
+
+
+
+/* 행사 목록 */
+
+
+/* 작가 소개 */
+#writers {
+    float: left;
+    width: 80vw;
+    height: 85vh;
+    border-top: 2px dashed rgb(130, 130, 130, 0.6);
+    border: none;
+    border-bottom: 2px dashed rgb(130, 130, 130, 0.6);
+    margin-top: 5vh;
+    display: flex;
+}
+
+#writertext {
+    width: 90vw;
+    height: 55vh;
+    border: none;
+    float: left;
+    margin-left: -5vw;
+}
+
+#writers>.writer>#writertext {
+    flex: 2;
+}
+
+#writers>.writer>#writertext>h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 5vh;
+}
+
+#writers>.writer>#writertext>p {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.writer > input[type="radio"] {
+    display: none;
+}
+
+#writertext>button {
+
+    width: 120px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 35vw;
+    font-size: 30px;
+    cursor: pointer;
+    border: 2px solid black;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#writertext>button:hover {
+    background-color: rgb(223, 223, 223);
+}
+#writertext>button:active {
+    background-color: rgb(187, 187, 187);
+}
+#writers>.writer>#bookimg {
+    flex: 3;
+    width: 60%;
+    background-color: blue;
+}
+
+#writerimg {
+    display: flex;
+    float: left;
+}
+
+#writertext ~ input[type="radio"] {
+    /* display: none; */
+}
+
+#writerimg>label:first-child>img {
+    margin-left: 5vw;
+}
+#writerimg>label:last-child>img {
+    width: 200px;
+    height: 300px;
+    margin-top: -5vh;
+}
+
+.popzone {
+    display: flex;
+}
+
+#writerimg>label>img {
+    cursor: pointer;
+    width: 300px;
+    margin: 10px;
+    border: 2px double black;
+}
+
+#writerimg {
+    margin-left: 6vw;
+}
+
+.zone > input + label > img{
+    position: fixed;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    width: 80vw;
+    height: 80vh;
+    z-index: 8;
+}
+#bgblack + label{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 7;
+}
+
+.modal {
+    position: fixed;
+    top: 15%;
+    left: 27%;
+    transform:scale(0.7);
+    z-index: -3;
+    opacity: 1;
+}
+.overlay {
+    opacity: 0;
+    top: 0;
+    z-index: -3;
+    margin-left: -100vw;
+    margin-top: -30vw;
+    width: 200vw;
+    height: 200vh;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0,0.4);
+}
+#popimg1:checked ~ .modal {
+  opacity: 1;
+  z-index: 10;
+  transform: scale(1);
+}
+#popimg1:checked ~ .modal > label > .overlay {
+    opacity: 1;
+    z-index: 9;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+#popimg2:checked ~ .modal > label > .overlay {
+    opacity: 1;
+    z-index: 9;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+#popimg3:checked ~ .modal > label > .overlay {
+    opacity: 1;
+    z-index: 9;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+#popimg4:checked ~ .modal > label > .overlay {
+    opacity: 1;
+    z-index: 9;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+#popimg1:checked ~ .modal > .modalbox > .radi1{
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1);
+}
+#popimg2:checked ~ .modal {
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1);
+  }
+#popimg2:checked ~ .modal > .modalbox > .radi2{
+      opacity: 1;
+      z-index: 10;
+      transform: scale(1);
+}
+#popimg3:checked ~ .modal {
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1);
+  }
+#popimg3:checked ~ .modal > .modalbox > .radi3{
+      opacity: 1;
+      z-index: 10;
+      transform: scale(1);
+}
+#popimg4:checked ~ .modal {
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1);
+  }
+#popimg4:checked ~ .modal > .modalbox > .radi4{
+      opacity: 1;
+      z-index: 10;
+      transform: scale(1);
+}
+.modal> .modalbox > div {
+    position: absolute;
+    opacity: 0;
+}
+.modal> .modalbox > div > img {
+  width: 50vw;
+  height: 60vh;
+} 
+/* 강연목록 시작 */
+
+#list {
+    float: left;
+    width: 80vw;
+    height: 80vh;
+    border-bottom: none;
+
+}
+
+#list>h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+.loop {
+    position: absolute;
+    z-index: 3;
+}
+
+.loop>img {
+    margin-top: -10px;
+    transform: rotate(90deg);
+    transition: 2s;
+}
+
+#list>.listbox {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 3vh;
+    margin-left: 25vw;
+    z-index: 3;
+    background-color: white;
+    color: black;
+}
+
+#list>.listbox>label {
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin-left: 225px;
+    margin-top: 210px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    background-color: antiquewhite;
+}
+
+/* 라벨 버튼 적용 */
+.listbox>input:first-child+label {
+    z-index: 5;
+}
+
+#cirbtn1:checked+label {
+    z-index: 4;
+}
+
+#cirbtn1:checked~#cirbtn2+label {
+    z-index: 6;
+}
+
+#cirbtn2:checked+label {
+    z-index: 4;
+}
+
+#cirbtn2:checked~#cirbtn3+label {
+    z-index: 6;
+}
+
+
+#cirbtn2:checked+label {
+    z-index: 4;
+}
+
+#cirbtn3:checked~#cirbtn4+label {
+    z-index: 6;
+}
+
+
+#cirbtn4:checked+label {
+    z-index: 4;
+}
+
+#cirbtn4:checked~#cirbtn1+label {
+    z-index: 6;
+}
+
+
+
+
+#cribtn1 {
+    z-index: 4;
+}
+
+#cirbtn2+label {
+    z-index: 4;
+}
+
+#cirbtn3 {
+    z-index: 4;
+}
+
+#cirbtn4 {
+    z-index: 4;
+}
+
+
+#cirbtn1:checked~.loop>img {
+    animation: rota1 1s forwards;
+}
+
+#cirbtn2:checked~.loop>img {
+    animation: rota2 1s forwards;
+}
+
+#cirbtn3:checked~.loop>img {
+    animation: rota3 1s forwards;
+}
+
+#cirbtn4:checked~.loop>img {
+    animation: rota4 1s forwards;
+}
+
+.listbox > input[type="radio"] {
+    display: none;
+}
+
+.listbox>div {
+    position: absolute;
+    margin-top: 1vh;
+    border: 1px none;
+    width: 8700px;
+    height: 30vh;
+
+}
+
+.listbox>div:nth-child(1) {
+    width: 300px;
+    margin-left: 300px;
+}
+
+.listbox>div:nth-child(1)>h1 {
+    width: 300px;
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.listbox>div:nth-child(1)>p {
+    margin-top: 50px;
+    font-size: 15px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.listbox>div:nth-child(2) {
+    margin-left: -6vw;
+}
+
+.listbox>div:nth-child(2)>h1 {
+    margin-top: 55px;
+    margin-left: 5px;
+    font-size: 25px;
+    text-align: left;
+}
+
+.listbox>div:nth-child(2)>p {
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.listbox>div:nth-child(3)>h1 {
+    text-align: right;
+    margin-right: 80px;
+}
+
+.listbox>div:nth-child(3)>p {
+    margin-top: 50px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.listbox>div:nth-child(3) {
+    position: absolute;
+    margin-top: 31vh;
+    width: 300px;
+
+}
+
+.listbox>div:nth-child(2) {
+    position: absolute;
+    left: 57.3vw;
+    margin-top: 31vh;
+    width: 300px;
+
+}
+
+.listbox>div:nth-child(4) {
+    width: 300px;
+}
+
+.listbox>div:nth-child(4)>h1 {
+    margin-top: 60px;
+    margin-left: 100px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.listbox>div:nth-child(4)>p {
+    margin-top: 30px;
+    margin-right: 15px;
+    font-size: 15px;
+    text-align: right;
+}
+
+@keyframes rota1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rota2 {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rota3 {
+    from {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes rota4 {
+    from {
+        transform: rotate(270deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.listbox>label>img {
+    animation: book 7s infinite;
+    animation-delay: 2s;
+    margin-top: 4vh;
+    width: 6vw;
+}
+
+@keyframes book {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(20deg);
+    }
+
+    30% {
+        transition: rotate(0deg);
+    }
+
+    45% {
+        transform: rotate(-20deg);
+    }
+
+    60% {
+        transition: rotate(0deg);
+    }
+
+    80% {transform: rotate(360deg);}
+    /* 100% {
+        transform: rotate(360deg);
+    } */
+}
+/* footer 시작 */
+footer {
+    width: 100vw;
+    height: 13vh;
+    float: left;
+    background-color: rgb(63, 63, 69);
+}
+.footimg > img{
+    margin-top: -2vh;
+    margin-left: -11vw;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+}
+.footbox{
+    width: 100vw;
+    height: 10vh;
+    margin-left: 15vw;
+    margin-top: 3vh;
+}
+.footbox > p{
+    color: azure;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.footbox > p:first-child {
+
+}
+.snsimg > img {
+    margin-top: -8vh;
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+}
+.snsimg > img:hover {
+    transform: scale(1.2);
+}
+.snsimg {
+    display: flex;
+    margin-left: 60vw;
+}
+.snsimg > img:first-child {
+    width: 95px;
+}
+/* overview 부분 */
+.leftside2 {
+    width: 10vw;
+    height: 80vh;
+    float: left;
+}
+#bookvs {
+    width: 80vw;
+    height: 85vh;
+    float: left;
+}
+
+#bookvs>.bookbox {
+    width: 70vw;
+    height: 80vh;
+    margin-left: 5vw;
+    margin-top: 2.5vh;
+    display: inline;
+}
+
+#bookvs>.bookbox>.bookimg>img {
+    margin-left: 5vw;
+    margin-top: 2.5vh;
+    border: 2px solid black;
+    width: 30vw;
+    height: 75vh;
+    animation: skew 10s infinite;
+
+}
+
+#bookvs>.bookbox>.booktext {
+    float: right;
+    width: 37vw;
+    height: 75vh;
+    overflow-y: scroll;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    margin-top: -75vh;
+    margin-right: 6vw;
+}
+
+#bookvs>.bookbox>.booktext>h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 5px 5px 10px rgb(255, 255, 255);
+}
+
+#bookvs>.bookbox>.booktext>p {
+    text-align: left;
+    font-weight: 600;
+    margin-left: 3vw;
+    margin-top: 1vh;
+    font-size: 21px;
+    width: 30vw;
+    height: 60vh;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 30px;
+}
+
+
+@keyframes skew {
+    0% {
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    0% {
+        transform:scale(1);
+    }
+}
+
+
+@media (max-width: 480px) {
+    * {
+        width: 480px;
+    }
+    header {
+        width: 480px;
+    }
+    .subimgs>.mainbox {
+        width: 420px;
+        height: 300px;
+    }
+    .mainimg>img {
+        width: 450px;
+    }
+    .subimgs>p {
+        width: 420px;
+        height: 150px;
+        margin-left: 4px;
+        margin-top: -190px;
+        font-size: 15px;
+    }
+    .subimgs > input[type="radio"] {
+        display: none;
+        z-index: 6;
+    }
+    .subimgs>label>img {
+        width: 80px;
+        height: 50px;
+        margin-top: -10vh;
+    }
+}

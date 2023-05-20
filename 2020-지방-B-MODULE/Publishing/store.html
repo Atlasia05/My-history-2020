@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/store.css">
+</head>
+<body>
+    <input type="checkbox" id="pocket">
+    <input type="checkbox" id="order">
+    <input type="checkbox" id="order">
+    <div id="overlay">
+    </div>
+    <div id="pocketzone">
+        <div id="nope">
+            <div></div>
+            <div></div>
+        </div>
+        <h1>장바구니</h1>
+        <ul id="thing"></ul>
+        <div id="sum"></div>
+        <label for="order">
+            <div id="buy">구매하기</div>
+        </label>
+    </div>
+    <header>
+        <div class="trash"></div>
+        <div id="logo">
+            <img src="./resources/IMGS/Logo.png" alt="">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="./index.html">홈</a> </li>
+                <li>온라인 집들이</li>
+                <li><a href="./store.html">스토어</a> </li>
+                <li>전문가</li>
+                <li>시공 견적</li>
+            </ul>
+        </div>
+        <div id="convenience">
+            <ul>
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+        <div class="trash"></div>
+    </header>
+    <label for="pocket">
+        <p>장바구니</p>
+    </label>
+
+    <div id="orderzone">
+        <h1>구매하기</h1>
+        <div class="information">
+            <p>이름</p>
+            <input type="text" id="name" placeholder="ex:홍길동">
+        </div>
+        <div class="information">
+            <p>주소</p>
+            <input type="text" id="address1" placeholder="ex:서울특별시 국사봉 37길 28">
+        </div>
+        <div class="information">
+            <p>상세주소</p>
+            <input type="text" id="address2" placeholder="ex:가성시티빌 301호">
+        </div>
+        <div id="end">완료</div>
+
+    </div>
+
+    <section id="todaybest">
+        <h1>통합검색 ㅣ</h1>
+        <input type="text" id="search">
+        <h1>이런 물건 어떠신가요?</h1>
+        <div id="left">
+            <div></div>
+            <div></div>
+        </div>
+        <div id="right">
+            <div></div>
+            <div></div>
+        </div>
+        <div id="items" style="width: 600vw">
+            <ul id="itemzone">
+
+            </ul>
+        </div>
+    </section>
+    <div id="dropzone" style="transform: scale(0)">
+        <h1>장바구니에 담기</h1>
+        <div id="drop"  ondrop="drop(event)" ondragover="dragEnter(event)">
+            <p id="droptext">이곳에 상품을 <br> 넣어주세요.</div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright (C) 2020 by MyHome Inc All Rights Reserved.</p>
+    </footer>
+    <script type="text/javascript" src="./resources/store.json"></script>
+    <script src="./resources/store.js"></script>
+</body>
+</html>

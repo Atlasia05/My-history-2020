@@ -1,0 +1,39 @@
+@font-face {
+    font-family: noteBlack;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Black.otf);
+}
+
+@font-face {
+    font-family: noteBlack;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Black.otf);
+}
+
+@font-face {
+    font-family: noteBold;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Bold.otf);
+}
+
+@font-face {
+    font-family: noteDemiLight;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-DemiLight.otf);
+}
+
+@font-face {
+    font-family: noteLight;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Light.otf);
+}
+
+@font-face {
+    font-family: noteMedium;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Medium.otf);
+}
+
+@font-face {
+    font-family: noteRegular;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Regular.otf);
+}
+
+@font-face {
+    font-family: noteThin;
+    src: url(./NotoSansCJKkr-hinted/NotoSansCJKkr-Thin.otf);
+}

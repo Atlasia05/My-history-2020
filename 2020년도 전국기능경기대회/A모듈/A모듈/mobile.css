@@ -1,0 +1,94 @@
+@media (max-width: 480px) {
+    .leftside {
+        float: none;
+    }
+    #imgslide {
+        float: none;
+        height: 0;
+    }
+    #introduce {
+        float: none;
+    }
+    #eventlist {
+        float: none;
+    }
+    .evimgbox1{
+        float: left;
+    }
+    .evimgbox2{
+        float: none;
+    }
+    #writers{
+        float: none;
+    }
+    #writertext{
+        float: none;
+    }
+    #writerimg {
+        float: none;
+    }
+    #list {
+        float: none;
+    }
+    footer{
+        float: none;
+    }
+    .mainmenu > li {
+        display: none;
+        height: 10%;
+        font-size: 10%;
+    }
+    
+    .subimgs>p {
+        font-size: large;
+    }
+    .subimgs>input[type="radio"] {
+        display: none;
+        z-index: 6;
+    }
+    .subimgs>label>img {
+        overflow: inherit;
+        border: 2px solid white;
+        cursor: pointer;
+        width: 20%;
+        height: 10%;
+        margin-left: 50px;
+        margin-top: 50vh;
+    }
+    #list>.listbox {
+        display: flex;
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-top: 3vh;
+        margin-left: 5vw;
+        z-index: 3;
+        background-color: white;
+        color: black;
+    }
+    #list>.listbox>label {
+        position: absolute;
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin-left: 155px;
+        margin-top: 140px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 150px;
+        font-size: 50px;
+        background-color: antiquewhite;
+    }
+    .loop>img {
+        width: 400px;
+        margin-top: -10px;
+        transform: rotate(90deg);
+        transition: 2s;
+    }
+    #list>.listbox > div{
+        width: 50vw;
+        height: auto;
+    }
+}

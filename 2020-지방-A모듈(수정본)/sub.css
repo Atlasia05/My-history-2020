@@ -1,0 +1,165 @@
+#subMainImg {
+    top: -20vh;
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 80vh
+}
+#subMainImg > img{
+    object-fit: cover;
+    width: 100vw;
+    height: 80vh
+}
+.subCover {
+    position: absolute;
+    top: 0vh;
+    width: 100vw;
+    height: 80vh;
+    background-color: rgb(32, 32, 32,0.8);
+}
+#subText{
+    position: absolute;
+    top: 45vh;
+    left: 25vw;
+}
+#subText > h1{
+    color: rgb(247, 181, 2);
+    font-size: 2vw;
+    font-family: noteMedium;
+}
+#subText > h5 {
+    color: white;
+    font-size: 1vw;
+    font-family: noteLight;
+}
+#viText {
+    position: absolute;
+    top: 70.5vh;
+    left: 40vw;
+    color: rgb(228, 228, 228);
+    font-size: 4vw;
+}
+#views {
+    position: absolute;
+    top: 60vh;
+    width: 100vw;
+    height: 160vh;
+    border: 1px solid black;
+}
+#views > #now {
+    top: 1vh;
+    left: 80vw;
+    position: absolute;
+    color: black;
+    font-size: 0.9vw;
+    font-family: noteMedium;
+}
+#views > #now > a {
+    color: black;
+    font-size: 0.9vw;
+    font-family: noteMedium;
+    text-decoration: none;
+}
+#poster {
+    margin-top: 5vh;
+    width: 80vw;
+    height: 90vh;
+    margin-left: 10vw;
+}
+#poster > #title {
+    font-size: 2vw;
+    font-family: noteBold;
+}
+#poster > #title >span{
+    font-size: 2vw;
+    font-family: noteBold;
+    color: #cc6633;
+}
+.lines {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    height: 0.3vh;
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+.line2 {
+    margin-top: 4vh;
+}
+.line3 {
+    margin-top: 0vh;
+    height: 0.2vh;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#theZone {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+#theZone > img {
+    flex: 1;
+    height: 100%;
+}
+#theZone > .postText {
+    flex: 2;
+}
+.postText > p {
+    margin-top: 3vh;
+    margin-left: 4vw;
+    font-size: 1vw;
+    font-family: noteMedium;
+}
+.postText > p > span {
+    font-family: noteBold;
+}
+#elseZone {
+    width: 80vw;
+    height: 65vh;
+}
+#elseZone > p {
+    border-bottom: 1px solid rgb(0, 0, 0,0.7);
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+#elseZone > p:nth-child(1) {
+    height: 15vh;
+}
+#elseZone > p:nth-child(2) {
+    height: 20vh;
+}
+#elseZone > p:nth-child(3) {
+    height: 20vh;
+}
+#elseZone > p:nth-child(4) {
+    height: 10vh;
+}
+#elseZone > p > .span1 {
+    margin-top: 2vh;
+    margin-right: 5vw;
+    font-size: 1.8vw;
+    font-family: noteBold;
+}
+#elseZone > p > .span2 {
+    margin-top: 3vh;
+    font-size: 1vw;
+    font-family: noteMedium;
+}
+#elseZone > p > .span3 {
+    margin-top: 7vh;
+    margin-left: -10vw;
+}
+#elseZone > p > .span4 {
+    margin-top: 7vh;
+    margin-left: -14vw;
+}
+#elseZone > p > .span5 {
+    margin-top: 7vh;
+    margin-left: -17vw;
+}
+#elseZone > p:last-child {
+    border-bottom: none;
+}
+footer {
+    top: 220vh;
+}

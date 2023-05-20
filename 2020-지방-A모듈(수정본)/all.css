@@ -1,0 +1,946 @@
+@import url("./fonts.css");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'noteDemiLight';
+    list-style: none;
+}
+input[type="radio"] {display: none;}
+body {overflow-x: hidden;}
+header {
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 10;
+}
+header > .logo {
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 1vh;
+}
+header > .logo > img {
+    position: absolute;
+    object-fit: cover;
+    top: 1vh;
+    width: 15vw;
+}
+header > .logo > img:last-child{visibility: hidden;}
+header > nav {
+    margin-left: 30vw;
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+}
+header > nav > div {
+    position: absolute;
+    height: 8vh;
+    width: 10vw;
+    top: 3.5vh;
+    color: white;
+    font-size: 1.1vw;
+    font-family: noteDemiLight;
+    text-align: center;
+
+}
+
+header > nav > div > label {
+    padding-left: 0.9vw;
+    padding-right: 0.9vw;
+    padding-bottom: 5vh;
+}
+header > nav > div > label > a {
+    color: white;
+    font-size: 1.1vw;
+    font-family: noteDemiLight;
+    text-decoration: none;
+}
+header > nav > div:nth-child(1) {left: 10vw;}
+header > nav > div:nth-child(2) {left: 22vw;}
+header > nav > div:nth-child(3) {left: 34vw;}
+header > nav > div:nth-child(4) {left: 46vw;}
+header > label {
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(222, 222, 222);
+    position: absolute;
+    border-top: 2px solid rgb(128, 128, 128,0.2);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    visibility: hidden;
+    top: 5vh;
+}
+header > label > a {
+    text-align: center;
+    line-height: 8vh;
+    margin-left: 1vw;
+    margin-right: 1vw ;
+    width: 8vw;
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+    font-size: 1vw;
+    font-family: noteDemiLight;
+}
+
+header > label > a:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+nav > div > div {
+    margin-left: 1vw;
+    margin-top: 0.5vh;
+    border-radius: 10px;
+    width: 0vw;
+    height: 2px;
+    background-color: rgb(110, 110, 110);
+    transition: 0.3s;
+}
+body > input[name="nav"]:hover ~ header{
+    height: 18vh;
+    background-color: rgb(222, 222, 222);
+} 
+body > input[name="nav"]:hover ~ header > nav > div > label > a {
+    color: black;
+}
+#nav1:hover ~ header > label[for="nav1"]{
+    top: 10vh;
+    z-index: 2;
+    visibility: visible;
+} 
+#nav2:hover ~ header > label[for="nav2"]{
+    top: 10vh;
+    z-index: 2;
+    visibility: visible;
+}
+#nav3:hover ~ header > label[for="nav3"]{
+    top: 10vh;
+    z-index: 2;
+    visibility: visible;
+}
+#nav4:hover ~ header > label[for="nav4"]{
+    top: 10vh;
+    z-index: 2;
+    visibility: visible;
+}
+
+#nav1:hover ~ header > nav > div:nth-child(1) > div {
+    width: 8vw;
+}
+#nav2:hover ~ header > nav > div:nth-child(2) > div {
+    width: 8vw;
+}
+#nav3:hover ~ header > nav > div:nth-child(3) > div {
+    width: 8vw;
+}
+#nav4:hover ~ header > nav > div:nth-child(4) > div {
+    width: 8vw;
+}
+body > #nav2:hover ~ header{
+    height: 10vh;
+} 
+body > input[name="nav"]:hover ~ header > .logo > img:first-child{
+    visibility: hidden;
+}
+body > input[name="nav"]:hover ~ header > .logo > img:last-child{
+    visibility: visible;
+}
+/* 헤더 끝 */
+#imgSlide {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(192, 192, 192);
+    background: url(./IMG/20.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+#imgSlide > .slideCover {
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 32, 0.85);
+
+}
+#imgSlide > h1 {
+     position: absolute;
+     line-height: 7vh;
+     font-size: 1.8vw;
+     left: 10vw;
+     top: 30vh;
+     z-index: 5;
+     color: white;
+     font-family: noteThin;
+}
+#imgSlide > h1 > span {
+    font-size: 4vw;
+    font-family: noteDemiLight;
+}
+#imgSlide > h1 > span > span {color: #e18734;}
+#imgSlide > .mainbox {
+    position: absolute;
+    top: 23vh;
+    left: 52.5vw;
+    z-index: 2;
+}
+#imgSlide > .mainbox > img {
+    object-fit: cover;
+    width: 46.8vw;
+}
+.dbox{
+    z-index: -1;
+    position: absolute;
+    width: 5vw;
+    height: 5vh;
+    background-color: black;
+    top: 87.5vh;
+    left: 49.1vw;
+    transform: rotate(45deg);
+}
+#slideImg {
+    position: absolute;
+    width: 34vw;
+    height: 40.5vh;
+    border: 1px solid white;
+    left: 54.8vw;
+    top: 30vh;
+    display: flex;
+    z-index: 1;
+    overflow: 
+    hidden;
+}
+#slideImg > ul {
+    display: flex;
+    position: relative;
+}
+#slideImg > ul > li {
+    position: absolute;
+    animation: autoslide 12s infinite;
+}
+#slideImg > ul > li > img {
+    object-fit: cover;
+    width: 34vw;
+    height: 40.5vh;
+}
+#slideImg > ul > li:nth-child(2) {transform: translateX(34vw);}
+#slideImg > ul > li:nth-child(3) {transform: translateX(68vw) ;}
+#slideImg > ul > li:nth-child(4) {transform: translateX(102vw) ;}
+#slideImg > ul > li:nth-child(5) {transform: translateX(136vw) ;}
+#slideImg > ul > li:nth-child(6) {transform: translateX(170vw) ;}
+@keyframes autoslide{
+    0% {left: 0vw}
+    20% {left: 0vw}
+    33% {left: -34vw}
+    53% {left: -34vw}
+    66% {left: -68vw}
+    86% {left: -68vw}
+    100% {left: -102vw}
+}
+.smallImg {
+    position: absolute;
+    top: 80%;
+    left: 11vw;
+    z-index: 2;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.smallImg > label {
+    width: 10vw;
+    height: 10vh;
+    background-color: black;
+    cursor: pointer;
+}
+.smallImg > label > img {
+    width: 12vw;
+    height: 15vh;
+    object-fit: cover;
+    box-shadow: 0px 0px 2px white;
+}
+#slimg1:checked ~ #slideImg > ul > li {animation: checkslide1 12s infinite;}
+#slimg2:checked ~ #slideImg > ul > li {animation: checkslide2 12s infinite;}
+#slimg3:checked ~ #slideImg > ul > li {animation: checkslide3 12s infinite;}
+@keyframes checkslide1{
+    0% {left: 0vw}
+    20% {left: 0vw}
+    33% {left: -34vw}
+    53% {left: -34vw}
+    66% {left: -68vw}
+    86% {left: -68vw}
+    100% {left: -102vw}
+}
+@keyframes checkslide2{
+    0% {left: -34vw}
+    20% {left: -34vw}
+    33% {left: -68vw}
+    53% {left: -68vw}
+    66% {left: -102vw}
+    86% {left: -102vw}
+    100% {left: -136vw}
+}
+@keyframes checkslide3{
+    0% {left: -68vw}
+    20% {left: -68vw}
+    33% {left: -102vw}
+    53% {left: -102vw}
+    66% {left: -136vw}
+    86% {left: -136vw}
+    100% {left: -170vw}
+}
+#Btns {
+    width: 8vw;
+    height: 6vh;
+    position: absolute;
+    top: 64vh;
+    left: 42vw;
+}
+#Btns > ul {
+    width: 6.2vw;
+    height: 7vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+#Btns > ul > li {
+    position: absolute;
+    width: 6.2vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    animation: BtnSl1 12s infinite;
+}
+#Btns > ul > li:nth-child(2) {left: 6.2vw;}
+#Btns > ul > li:nth-child(3) {left: 12.4vw;}
+#Btns > ul > li:nth-child(4) {left: 18.6vw;}
+#Btns > ul > li:nth-child(5) {left: 24.8vw;}
+#Btns > ul > li:nth-child(6) {left: 31vw;}
+#Btns > ul > li > label{
+    width: 3vw;
+    height: 6vh;
+
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Btns > ul > li > label > span{
+    width: 1.2vw;
+    height: 0.3vh;
+    border-radius: 10px;
+    background-color: white;
+}
+#Btns > ul > li > label:first-child > span:first-child{
+    margin-bottom: 1.2vh;
+    transform: rotate(-45deg);
+}
+#Btns > ul > li > label:first-child > span:last-child{
+    transform: rotate(45deg);
+}
+
+#Btns > ul > li > label:last-child > span:first-child{
+    margin-bottom: 1.2vh;
+    transform: rotate(45deg);
+}
+#Btns > ul > li > label:last-child > span:last-child{
+    transform: rotate(-45deg);
+}
+
+#Rbtn1:checked ~ #slideImg > ul > li {
+    animation: checkslide2 12s infinite;
+}
+#Rbtn1:checked ~ #Btns > ul > li {
+    animation: BtnSl2 12s infinite;
+}
+
+#Rbtn2:checked ~ #slideImg > ul > li {
+    animation: checkslide3 12s infinite;
+}
+#Rbtn2:checked ~ #Btns > ul > li {
+    animation: BtnSl3 12s infinite;
+}
+
+#Rbtn3:checked ~ #slideImg > ul > li {
+    animation: checkslide1 12s infinite;
+}
+#Rbtn3:checked ~ #Btns > ul > li {
+    animation: BtnSl1 12s infinite;
+}
+
+#Lbtn1:checked ~ #slideImg > ul > li {
+    animation: checkslide3 12s infinite;
+}
+#Lbtn1:checked ~ #Btns > ul > li {
+    animation: BtnSl3 12s infinite;
+}
+
+#Lbtn2:checked ~ #slideImg > ul > li {
+    animation: checkslide1 12s infinite;
+}
+#Lbtn2:checked ~ #Btns > ul > li {
+    animation: BtnSl1 12s infinite;
+}
+
+#Lbtn3:checked ~ #slideImg > ul > li {
+    animation: checkslide2 12s infinite;
+}
+#Lbtn3:checked ~ #Btns > ul > li {
+    animation: BtnSl2 12s infinite;
+}
+
+@keyframes BtnSl1 {
+    0% {transform: translateX(0vw);}
+    32.99% {transform: translateX(0vw);}
+    33% {transform: translateX(-6.225vw);}
+    65.99% {transform: translateX(-6.225vw);}
+    66% {transform: translateX(-12.4vw);}
+    99.99% {transform: translateX(-12.4vw);}
+    100% {transform: translateX(-18.6vw);}
+}
+@keyframes BtnSl2 {
+    0% {transform: translateX(-6.225vw);}
+    32.29% {transform: translateX(-6.225vw);}
+    33% {transform: translateX(-12.4vw);}
+    65.99% {transform: translateX(-12.4vw);}
+    66% {transform: translateX(-18.6vw);}
+    99.99% {transform: translateX(-18.6vw);}
+    100% {transform: translateX(-24.8vw);}
+}
+@keyframes BtnSl3 {
+    0% {transform: translateX(-12.4vw);}
+    32.29% {transform: translateX(-12.4vw);}
+    33% {transform: translateX(-18.6vw);}
+    65.99% {transform: translateX(-18.6vw);}
+    66% {transform: translateX(-24.8vw);}
+    99.99% {transform: translateX(-24.8vw);}
+    100% {transform: translateX(-31vw);}
+}
+
+/* 이미지 슬라이드 끝 */
+#bookIntro {
+    position: absolute;
+    top: 90vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    background-size: cover;
+}
+.bookText {
+    width: 50%;
+    height: 100%;
+}
+.bookText > h3 {
+    margin-left: 10vw;
+    margin-top: 10vh;
+    font-size: 1.4vw;
+    color: purple; 
+    font-family: noteBold;
+}
+.bookText > div > h1 {
+    margin-top: 3vh;
+    font-size: 2vw;
+    margin-left: 10vw;
+    line-height: 4.5vh;
+    font-family: noteBold;
+}
+.bookText > div > p {
+    margin-top: 5vh;
+    margin-left: 10.5vw;
+    font-family: noteRegular;
+    font-size: 0.8vw;
+    color: rgb(52, 52, 52);
+}
+.bookImg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+.bookImg > div {
+    position: relative;
+    margin-top: 10vh;
+    display: flex;
+    width: 35vw;
+    height: 40vh;
+    overflow: hidden;
+    transition: 0.5s;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10vw;
+}
+.bookImg > div > img {
+    position: absolute;
+    width: 35vw;
+    object-fit: cover;
+    transition: 0.3s;
+    
+}
+.bookImg > div > img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+/* 행사목록1 끝 */
+#eventList {
+    position: absolute;
+    top: 150vh;
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(237, 237, 237);
+}
+#eventList > h3 {
+    margin-left: 10vw;
+    font-size: 1.4vw;
+    color: purple;
+    transform: translateY(3vh);
+    font-family: noteBold;
+}
+#eventList > ul {
+    display: flex;
+    margin-top: 5vh;
+    width: 80%;
+    height: 100%;
+    margin-left: 10vw;
+    justify-content: space-between;
+}
+#eventList > ul > li {
+    flex: 1;
+    height: 70%;
+    overflow: hidden;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    position: relative;
+    box-shadow: 0px 0px 3px 0px;
+}
+#eventList > ul > li > img {
+    width: 100%;
+    object-fit: cover;
+}
+#eventList > ul > li:nth-child(1) > img{
+    width: 41vw;
+}
+#eventList > ul > li:nth-child(2) > img{
+    width: 38vw;
+}
+#eventList > ul > li:nth-child(3) > img{
+    width: 41vw;
+}
+#eventList > ul > li >div {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 20vw;
+    height: 50vh;
+    background-color: rgba(244, 244, 244, 0.9);
+    z-index: 2;
+    transition: 0.3s;
+}
+#eventList > ul > li >div > .title > h1 {
+    font-size: 2vw;
+    color: rgb(110, 110, 110);
+}
+#eventList > ul > li >div > span {
+    font-size: 1.1vw;
+    margin-left: 10%;
+    color: rgb(1, 38, 83);
+    transition: 0.3s;
+}
+#eventList > ul > li >div > p {
+    margin-top: 13%;
+    margin-left: 10%;
+    transition: 0.3s;
+    color: rgb(46, 46, 46);
+}
+
+#eventList > ul > li:hover > div {
+    top: 0%;
+    left: 0;
+    width: 100%;
+}
+#eventList > ul > li:hover > div > span {
+    font-size: 1.3vw;
+    font-family: noteRegular;
+
+}
+#eventList > ul > li:hover > div > p{
+    font-size: 1vw;
+    font-family: noteDemiLight;
+}
+#eventList > ul > li >div > .title {
+    margin-top: 10%;
+    margin-left: 10%;
+    display: flex;
+
+}
+#eventList > ul > li >div > .title > p {
+    font-family: noteMedium;
+    margin-left: 1vw;
+    margin-top: 1.1vh;
+    font-size: 1.5vw;
+    color: rgb(87, 87, 87);
+}
+
+/* 행사목록 */
+#invite {
+    position: absolute;
+    top: 210vh;
+    width: 100%;
+    height: 65vh;
+    position: relative;
+}
+#invite > h3 {
+    margin-left: 10vw;
+    font-size: 1.4vw;
+    color: purple;
+    transform: translateY(3vh);
+    font-family: noteBold;
+}
+.backBox {
+    position: absolute;
+    top: 42vh;
+    left: 8vw;
+    width: 92vw;
+    height: 23vh;
+    background-color: rgb(1, 64, 121);
+}
+.backBox > p{
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 5vw;
+    font-family: noteBold;
+    margin-top: 10vh;
+    margin-left: 2vw;
+}
+.intext  {
+    margin-left: 10vw;
+    margin-top: 5vh;
+    width: 80%;
+}
+.intext > p {
+    font-family: noteLight;
+    font-size: 1vw;
+}
+.intext > button {
+    margin-top: 1.5vh;
+    width: 4vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#invite > .popup {
+    position: absolute;
+    width: 80%;
+    height: 25vh;
+    left: 10vw;
+    top: 30vh;
+    display: flex;
+    justify-content: space-between;
+}
+.popup > li {
+    width: 24%;
+    height: 25vh;
+    overflow: hidden;
+} 
+.popup > li > label > img {
+    object-fit: cover;
+    width: 20vw;
+    cursor: pointer;
+} 
+.popup > li:last-child > label > img{
+    margin-top: -12vh;
+}
+#popupzone {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+}
+#popBack {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 5;
+}
+#popupzone > ul {
+    position: relative;
+    border-radius: 20px;
+    width: 60vw;
+    height: 70vh;
+    background-color: white;
+    margin-top: -85vh;
+    margin-left: 20vw;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255,0.3);
+    z-index: 2;
+}
+#popupzone > ul > li {
+    position: absolute;
+    width: 60vw;
+    height: 70vh;
+    top: 0;
+    overflow: hidden;
+    visibility: hidden;
+    border-radius: 20px;
+}
+#popupzone > ul > li > img {
+    
+    z-index: 6;
+    object-fit: cover;
+    width: 60vw;
+}
+#popupzone > ul > li:last-child > img {
+    margin-top: -35vh;
+}
+#popimg5:checked ~ #popupzone {
+    display: none;
+}
+#popimg1:checked ~ #popupzone {
+    display: block;
+}
+#popimg1:checked ~ #popupzone > ul > li:nth-child(1){
+    visibility: visible;
+}
+#popimg2:checked ~ #popupzone > ul > li:nth-child(2){
+    visibility: visible;
+}
+#popimg3:checked ~ #popupzone > ul > li:nth-child(3){
+    visibility: visible;
+}
+#popimg4:checked ~ #popupzone > ul > li:nth-child(4){
+    visibility: visible;
+}
+#invite > h1 {
+    position: absolute;
+    z-index: -2;
+    top: 19vh;
+    left: 59vw;
+    font-size: 3vw;
+    line-height: 5vh;
+    font-family: noteMedium;
+    color: rgb(0, 0, 0, 0.4);
+}
+/* 초청작가 끝 */
+#evList {
+    position: absolute;
+    top: 210vh;
+    width: 100vw;
+    height: 80vh;
+    background-color: rgb(225, 135, 52);
+    position: relative;
+    overflow: hidden;
+}
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 70vh;
+
+    margin-left: 56vw;
+}
+.circle > img {
+    position: absolute;
+    top: 5vh;
+    object-fit: cover;
+    width: 40vw;
+    height: 75vh;
+}
+.circle > label {
+    position: absolute;
+    top: 35vh;
+    object-fit: cover;
+}
+.circle > label > img{
+    width: 7vw;
+    animation: autoMove 3s infinite;
+}
+@keyframes autoMove{
+    0% {transform: scale(1);}
+    25% {transform: scale(1.05);}
+    50% {transform: scale(1);}
+    100% {transform: scale(1);}
+}
+.circle > img:first-child {
+    opacity: 0.1;
+}
+.circle > .cover {
+    position: absolute;
+    top: 5vh;
+
+    width: 40vw;
+    height: 75vh;
+}
+.circle > .cover > img {
+    object-fit: cover;
+    width: 40vw;
+    height: 75vh;
+}
+#evList > h5 {
+    margin-left: 10vw;
+    font-size: 1vw;
+    transform: translateY(20vh);
+    font-family: noteDemiLight;
+    color: white;
+}
+
+#evList > h1 {
+    margin-left: 10vw;
+    transform: translateY(20vh);
+    font-size: 4vw;
+    line-height: 9vh;
+    font-family: noteRegular;
+    color: rgba(255, 255, 255, 0.8);
+}
+.human1 {
+    position: absolute;
+    left: 10vw;
+}
+.human1 > img {
+    object-fit: cover;
+    width: 9vw;
+}
+.human2 {
+    position: absolute;
+    top: 0;
+    top: 50vh;
+    left: 20vw;
+}
+.human2 > img {
+    object-fit: cover;
+    width: 18vw;
+}
+.human3 {
+    position: absolute;
+    top: 17vh;
+    left: 35vw;
+}
+.human3 > img {
+    object-fit: cover;
+    width: 13vw;
+}
+.circle > ul {
+    position: absolute;
+    display: flex;
+    width: 33vw;
+    height: 32.4vh;
+}
+.circle > #cirUl1 {top: 10vh;}
+.circle > #cirUl2 {top: 42.4vh;}
+.circle > ul > li {
+    width: 50%;
+    height: 100%;
+}
+#cirUl1 > li:first-child > h2{
+    margin-top: 11vh;
+    margin-left: 5vw;
+    font-size: 1.2vw;
+}
+#cirUl1 > li:first-child > p {
+    margin-top: 2vh;
+    margin-left: 3vw;
+}
+#cirUl1 > li:last-child > h2{
+    margin-top: 11vh;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+}
+#cirUl1 > li:last-child > p {
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+}
+
+#cirUl2 > li:first-child > h2{
+    margin-top: 5vh;
+    margin-left: 4vw;
+    font-size: 1.2vw;
+}
+#cirUl2 > li:first-child > p {
+    margin-top: 1.5vh;
+    margin-left: 4vw;
+}
+#cirUl2 > li:last-child > h2{
+    margin-top: 5vh;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+}
+#cirUl2 > li:last-child > p {
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+}
+.cover {
+    transition: 0.5s;
+}
+.circle > label {
+    visibility: hidden;
+    cursor: pointer;
+}
+#rot1:checked ~ .circle > label[for="rot1"]{visibility: hidden;}
+#rot1:checked ~ .circle > label[for="rot2"]{visibility: visible;}
+#rot1:checked ~ .circle > .cover {animation: rotate4 0.3s ease-out forwards;}
+
+#rot2:checked ~ .circle > label[for="rot2"]{visibility: hidden;}
+#rot2:checked ~ .circle > label[for="rot3"]{visibility: visible;}
+#rot2:checked ~ .circle > .cover {animation: rotate1 0.3s ease-out forwards;}
+
+#rot3:checked ~ .circle > label[for="rot3"]{visibility: hidden;}
+#rot3:checked ~ .circle > label[for="rot4"]{visibility: visible;}
+#rot3:checked ~ .circle > .cover {animation: rotate2 0.3s ease-out forwards;}
+
+#rot4:checked ~ .circle > label[for="rot4"]{visibility: hidden;}
+#rot4:checked ~ .circle > label[for="rot1"]{visibility: visible;}
+#rot4:checked ~ .circle > .cover {animation: rotate3 0.3s ease-out forwards;}
+@keyframes rotate1{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(90deg);}
+}
+@keyframes rotate2{
+    0%{transform: rotate(90deg);}
+    100%{transform: rotate(180deg);}
+}
+@keyframes rotate3{
+    0%{transform: rotate(180deg);}
+    100%{transform: rotate(270deg);}
+}
+@keyframes rotate4{
+    0%{transform: rotate(270deg);}
+    100%{transform: rotate(360deg);}
+}
+/* 강연목록 끝 */
+footer {
+    position: absolute;
+    top: 365vh;
+    width: 100vw;
+    height: 14vh;
+    background-color: rgb(213, 213, 213);
+}
+footer > .logo {margin-left: 10vw;}
+footer > p:nth-child(2){margin-top: 3vh}
+footer > p {margin-left: 10vw;}
+.icons {
+    width: 10vw;
+    height: 3vw;
+    position: absolute;
+    top: 1vh;
+    left: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons > img {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.icons > img:hover {transform: scale(1.1);}

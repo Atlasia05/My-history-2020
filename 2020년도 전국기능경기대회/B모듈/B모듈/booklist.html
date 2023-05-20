@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./book.css">
+    <title>온라인 책만들기</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./IMG/Logo2.png" alt="">
+                </a>
+            </div>
+            <div class="blindbox1"></div>
+            <div class="blindbox2"></div>
+            <ul class="mainmenu">
+                <li class="margin1"></li>
+                <li><a href="./index.html">전주 독서 대전</a>
+                    <ul>
+                        <li>대전소개</li>
+                        <li>회원가입 / 로그인</li>
+                        <li><a href="./overview.html"> 행사개요</a></li>
+                    </ul>
+                </li>
+                <li><a href="./booklist.html"> 온라인 책만들기</a></li>
+                <li>독자와의 만남
+                    <ul>
+                        <li>예약하기</li>
+                        <li>예약확인</li>
+                    </ul>
+                </li>
+                <li>관리자 페이지
+                    <ul>
+                        <li>행사등록</li>
+                        <li>예약관리</li>
+                    </ul>
+                </li>
+                <li class="margin2"></li>
+                <div class="hoverbox"></div>
+            </ul>
+        </nav>
+    </header>
+    <input type="checkbox" id="modalck">
+    <input type="checkbox" id="textzone">
+    <input type="checkbox" id="imgput">
+    <input type="checkbox" id="choise">
+    <input type="checkbox" id="del">
+    <input type="file" id="fileInput" accept="video/*">
+
+    <div class="textline">
+        <div class="valuebox">
+            <label for="textzone"><span class="btn-close">&times;</span></label>
+            <input type="text" placeholder="텍스트를 입력하세요" id="tvalue"><br>
+            <input type="number" placeholder="X좌표 값" id="xvalue"><br>
+            <input type="number" placeholder="Y좌표 값" id="yvalue">
+            <input type="number" placeholder="Font Size" id="fvalue">
+            <input type="color" id="cvalue">
+            <input type="submit" id="submit">
+        </div>
+    </div>
+    <div class="choiseimg">
+        <div class="choose">
+            <label for="imgput">
+                <span class="btn-close">&times;</span>
+            </label>
+            <img src="./선수제공파일/B/img/1.jpg" alt="1.jpg">
+            <img src="./선수제공파일/B/img/2.jpg" alt="2.jpg">
+            <img src="./선수제공파일/B/img/3.jpg" alt="3.jpg"> 
+            <img src="./선수제공파일/B/img/4.jpg" alt="4.jpg">
+            <img src="./선수제공파일/B/img/5.jpg" alt="5.jpg">
+            <img src="./선수제공파일/B/img/6.jpg" alt="6.jpg">
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="desc" >
+                <div class="desc-header">
+                    <span id="count">
+                        <!-- JS 카운트 들어갈 공간 -->
+                    </span>
+                    <div class="detail">
+                        
+                        <div id="beforepage" >이전</div>
+                        <div id="nextpage">다음</div>
+                    </div>
+                    <label for="modalck">
+                        <span class="btn-close">&times;</span>
+                    </label>
+                    <!-- </label> -->
+                </div>
+                <div class="desc-content">
+                    <div class="deco">
+                        <label for="choise">
+                            <p id="chose">객체선택</p>
+                        </label>
+                        <p id="pen">펜</p>
+                        <p id="square">사각형</p>
+                        <p id="circle">원형</p>
+                        <p id="angle">삼각형</p>
+                        <label for="textzone">
+                            <p id="text">텍스트</p>
+                        </label>
+                        <label for="del">
+                            <p id="delete">삭제</p>
+                        </label>
+                        <label for="imgput">
+                            <p>사진넣기</p>
+                        </label>
+                        <label for="fileInput">
+                            <p>영상넣기</p>
+                        </label>
+                        <p id="addpage" onclick="counter()">페이지 추가</p>
+                    </div>
+                    <div id="mainzone">
+                        <div class="none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <aside class="leftside"></aside>
+    <section>
+        <h1>책 검색창</h1>
+        <p id="horder">통합검색 |</p>
+        <form id="search-from">
+
+            <input type="text" id="search">
+            <button id="searchBtn">검색</button>
+
+            <ul id="list">
+                <!-- 자바 스크립트가 들어갈 공간 -->
+            </ul>
+        </form>
+        <script src="./선수제공파일/B/book.json"></script>
+        <script src="./book.js"></script>
+    </section>
+
+</body>
+
+</html>
